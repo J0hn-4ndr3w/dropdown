@@ -1,0 +1,227 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: 'Epilogue', sans-serif;
+	    box-sizing: border-box;
+	    font-family: 'Jost', sans-serif;
+	    list-style: none;
+	    text-decoration: none;
+	    scroll-behavior: smooth;
+    }
+    body{
+      background: hsl(0, 0%, 98%); 
+    }
+    
+
+    header{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1% 3%;
+    }
+
+    .logo{
+      cursor: pointer;
+    }
+    #menu-btn{
+      font-size: 30px;
+      color: hsl(0, 0%, 8%);
+      z-index: 10001;
+	    cursor: pointer;
+      display: none;
+    }
+
+    .navlist{
+      margin-left: 60px;
+      list-style: none;
+      position: relative;
+    }
+
+    .navlist li{
+      position: relative;
+      float: left;
+    }
+  
+
+    .navlist li a{
+      font-size: 18px;
+      padding: 18px;
+      color: hsl(0, 0%, 41%);
+      display: block;
+      transition: all o.3s ease 0s;
+    }
+
+    .navlist li a:hover{
+      color: hsl(0, 0%, 8%);
+    }
+    .navlist li ul{
+      position: absolute;
+      left: -60px;
+      width: 160px;
+      background: #fff;
+      border-radius: 18px;
+      display: none;
+    }
+    .navlist li ul li{
+      width: 100%;
+      margin: 5px 20px 10px;
+    }
+    .navlist li ul li a{
+      padding: 2px;
+    }
+    .navlist li:hover > ul{
+      display: initial;
+    }
+    .link{
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      width: 250px;
+    }
+    .link .btn1{
+      display: inline-block;
+      padding: 9px 25px;
+      background-color: transparent;
+      color: hsl(0, 5%, 50%);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all o.3s ease 0s;
+    }
+    .link .btn1:hover{
+      color: hsl(0, 0%, 8%);
+    }
+    .link .btn2{
+      display: inline-block;
+      padding: 9px 25px;
+      background-color: #fff;
+      color: hsl(0, 0%, 41%);
+      border: 1px solid hsl(0, 0%, 41%);
+      border-radius: 13px;
+      cursor: pointer;
+      transition: all o.3s ease 0s;
+    }
+    .link .btn2:hover{
+      color: hsl(0, 0%, 8%);
+      border: 1px solid hsl(0, 0%, 8%);
+    }
+
+    .main{
+      display: flex;
+      justify-content: space-between;
+    }
+    .right{
+      margin-top: 10rem;
+      margin-left: 11rem;
+      width: 550px;
+    }
+    .right h1{
+      font-size: 80px;
+      letter-spacing: 2px;
+    }
+    .right p{
+      margin-top: 2rem;
+      font-size: 18px;
+      width: 450px;
+      line-height: 25px;
+      color: hsl(0, 0%, 41%);
+    }
+    .right button{
+      font-size: large;
+      margin-top: 5rem;
+      border-radius: 10px;
+      width: 150px;
+      height: 50px;
+      color: #fff;
+      background: #000;
+    }
+    .right button:hover{
+      background: #fff;
+      color: #000;
+    }
+    .right .clients{
+      margin-top: 7rem;
+      display: flex;
+      height: 30px;
+    }
+    .right .clients .client1{
+      margin-right: 3rem;
+      width:90px;
+      height: 20px;
+    }
+    .right .clients .client2{
+      margin-right: 3rem;
+      width:90px;
+      height: 30px;
+    }
+    .right .clients .client3{
+      margin-right: 3rem;
+      width:90px;
+      height: 18px;
+    }
+    .right .clients .client4{
+      margin-right: 3rem;
+      width:90px;
+      height: 23px;
+    }
+    
+    .left{
+      margin-right: 10rem;
+    }
+    .left img{
+      margin-top: 2rem;
+      width: 500px;
+      height: 700px;
+    }
+    footer{
+      padding: 5rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      height: 500px;
+    }
+    @media (max-width: 870px){
+      header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #menu-btn{
+        display: block;
+      }
+      #menu-btn.bx-menu{
+        transform: rotate(180deg);
+      }
+      .navlist{
+        display: none;
+      }
+      .navlist{
+        position: absolute;
+        top: -600px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--main-color);
+        text-align: right;
+        transition: all .40s;
+      }
+      .navlist a{
+        display: block;
+        padding: 1.2rem;
+        margin: 1.5rem;
+        border-right: 2px solid var(--bg-color);
+        color: var(--bg-color);
+      }
+      .navlist a:hover{
+        background: var(--bg-color);
+        color: var(--main-color);
+      }
+      .navlist a::after{
+        display: none;
+      }
+      .navlist.active{
+        top: 100%;
+      }
+    }
